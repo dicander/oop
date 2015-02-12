@@ -1,0 +1,23 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+public class FileAndScanner {
+	public static void main(String[] args) {
+		Scanner sc = null; //Skapa variabeln utanför try. Initiera den.
+		try {
+			sc = new Scanner(new File("/home/dicander/Documents/finalsaol"));
+		} catch (FileNotFoundException e) {
+			if(sc != null) {
+				sc.close();
+			}
+			System.err.println("Failed to open file!");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		for(int i=0; i<18; ++i) {
+			System.out.println(sc.nextLine());
+		}
+	}
+}
