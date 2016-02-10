@@ -47,7 +47,7 @@ public final class Grep {
                 System.err.printf("%s: %s%n", NAME, e);
                 errCode = 1;
             }
-            //System.out.println("Nu kördes finally!");
+            System.out.println("Nu kördes finally!");
             System.exit(errCode);
         }
     }
